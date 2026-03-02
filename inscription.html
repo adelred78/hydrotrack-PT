@@ -5,71 +5,46 @@
     <title>HydroTrack - Inscription</title>
     <link rel="stylesheet" href="Style/index.css" />
   </head>
-  <body class="auth-page">
-    <header>
-      <a href="index.html">
-        <img src="./IMG/logo_projet.png" alt="Logo HydroTrack" />
-      </a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="a_propos.html">A propos</a></li>
-          <li><a href="kit.html">Smart Pack</a></li>
-          <li><a href="team.html">Equipe</a></li>
-          <li>
-            <a href="connexion.html" class="login" style="color: white"
-              >Login</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
 
+  <body class="auth-page">
     <div class="login-container">
-      <form method="post" class="login-form">
+      <form id="signup-form" class="login-form">
         <h2>Inscription <span class="brand">HydroTrack</span></h2>
 
+        <!-- Identifiants -->
         <input
           type="text"
-          name="username"
+          id="signup-username"
           placeholder="Nom d'utilisateur"
           required
         />
-        <input type="email" name="email" placeholder="Email" required />
+
         <input
           type="password"
-          name="password"
+          id="signup-password"
           placeholder="Mot de passe"
           required
         />
 
         <hr />
+
         <p style="font-size: 0.8rem; color: #666">Configuration du champ</p>
 
         <input
           type="number"
-          name="superficie"
+          id="superficie"
           placeholder="Superficie (en m²)"
           required
         />
+
         <input
           type="text"
-          name="ville"
+          id="ville"
           placeholder="Ville / Localisation"
           required
         />
 
-        <select
-          name="frequence"
-          required
-          style="
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-          "
-        >
+        <select id="frequence" required>
           <option value="Automatique (Capteurs)">Automatique (Capteurs)</option>
         </select>
 
@@ -80,5 +55,9 @@
         </p>
       </form>
     </div>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
   </body>
 </html>
